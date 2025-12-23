@@ -1,92 +1,144 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Doe - Programmer Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>m4deme1ns4ne — Alexander Volzhanin</title>
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2;--accent:#6ee7b7}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;background:linear-gradient(180deg,#071129 0%, #071a2a 100%);color:#e6eef6}
+    .wrap{max-width:980px;margin:36px auto;padding:24px}
+    header{display:flex;gap:20px;align-items:center}
+    .avatar{width:84px;height:84px;border-radius:12px;background:linear-gradient(135deg,#1f2937,#111827);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);font-size:28px}
+    h1{margin:0;font-size:28px}
+    p.lead{margin:6px 0;color:var(--muted)}
+    .card{background:rgba(255,255,255,0.02);padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6);margin-bottom:14px}
+    .two-col{display:grid;grid-template-columns:1fr 320px;gap:18px}
+    .meta-row{display:flex;justify-content:space-between;align-items:center}
+    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+    .skill{background:rgba(255,255,255,0.02);padding:6px 8px;border-radius:8px;color:var(--muted);font-size:13px}
+    .project{margin-bottom:12px}
+    .project h4{margin:0 0 6px 0}
+    .muted{color:var(--muted)}
+    a.link{color:var(--accent);text-decoration:none}
+    footer{margin-top:22px;color:var(--muted);font-size:13px;text-align:center}
+    @media(max-width:860px){.two-col{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
+  <div class="wrap">
     <header>
-        <nav>
-            <div class="container">
-                <h1>John Doe</h1>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
+      <div class="avatar">AV</div>
+      <div>
+        <h1>Волжанин Александр Павлович — m4deme1ns4ne</h1>
+        <p class="lead">Санкт‑Петербург · Разработчик AI‑агентов, Python/ML/Web</p>
+      </div>
     </header>
 
-    <section id="hero">
-        <div class="container">
-            <h2>Programmer & Developer</h2>
-            <p>Building innovative solutions with code.</p>
-            <a href="#projects" class="btn">View Projects</a>
-        </div>
-    </section>
+    <div class="two-col" style="margin-top:22px">
+      <main>
+        <section class="card">
+          <h2 style="margin-top:0">Кратко обо мне</h2>
+          <p class="muted">Я занимаюсь разработкой Python‑проектах с акцентом на LLM, RAG и автоматизацию рабочих процессов: создаю Telegram‑ботов, API‑сервисы, а также разрабатываю и интегрирую AI‑агентов. Умею разворачивать решения в Docker, писать надёжные API на FastAPI и работать с инструментами для цепочек LLM (LangChain, LangGraph).</p>
 
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>Hello! I'm John Doe, a passionate programmer with 5 years of experience in web development, software engineering, and problem-solving. I specialize in full-stack development and love turning ideas into reality.</p>
-        </div>
-    </section>
+          <h3 style="margin-top:12px">Ключевые технологии</h3>
+          <div class="skills">
+            <span class="skill">Python</span>
+            <span class="skill">FastAPI / Flask</span>
+            <span class="skill">LangChain / LangGraph</span>
+            <span class="skill">Transformers / Hugging Face</span>
+            <span class="skill">RAG</span>
+            <span class="skill">Docker / Docker‑compose</span>
+            <span class="skill">Linux</span>
+            <span class="skill">Git</span>
+            <span class="skill">Jupyter / Data Science</span>
+          </div>
+        </section>
 
-    <section id="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML, CSS, JavaScript</li>
-                <li>React, Node.js</li>
-                <li>Python, Django</li>
-                <li>Git, Agile Methodologies</li>
-                <li>Database Management (SQL, MongoDB)</li>
-            </ul>
-        </div>
-    </section>
+        <section class="card">
+          <h2 style="margin-top:0">Опыт работы</h2>
 
-    <section id="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project-grid">
-                <div class="project">
-                    <h3>Project One</h3>
-                    <p>A web app built with React and Node.js.</p>
-                    <a href="https://github.com/username/project-one" target="_blank">View on GitHub</a>
-                </div>
-                <div class="project">
-                    <h3>Project Two</h3>
-                    <p>A machine learning model using Python.</p>
-                    <a href="https://github.com/username/project-two" target="_blank">View on GitHub</a>
-                </div>
-                <div class="project">
-                    <h3>Project Three</h3>
-                    <p>A mobile app developed with Flutter.</p>
-                    <a href="https://github.com/username/project-three" target="_blank">View on GitHub</a>
-                </div>
+          <div style="margin-bottom:10px">
+            <div class="meta-row">
+              <div>
+                <strong>Сбер — Стажёр, разработчик AI‑агентов</strong>
+                <div class="muted">Санкт‑Петербург / Москва (Северо‑Западное отделение) · Июнь 2025 — Декабрь 2025</div>
+              </div>
             </div>
-        </div>
-    </section>
+            <p class="muted" style="margin-top:8px">Во время платной стажировки участвовал в двух GenAI‑проектах: <strong>CreditVision</strong> (выпущен в прод) и <strong>IVR</strong> (тестовый стенд в ИФТ). Задачи включали проектирование архитектуры агента, написание и валидацию промптов, разработку API для агентов и поддержку на тестовых стендах. Во второй половине стажировки был назначен тим‑лидом команды стажёров (удалённая команда в Калининграде): проводил code review и наставничество.</p>
+            <p class="muted">В рамках исследований рассматривали возможности локального разворачивания моделей; из‑за ограничений инфраструктуры использовали внешние API (например, GigaChat) для прототипирования.</p>
+            <div class="muted" style="margin-top:8px"><strong>Технологии:</strong> Python, Docker, LangChain/LangGraph, FastAPI, Linux, Git</div>
+          </div>
 
-    <section id="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>Email: john.doe@example.com</p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/johndoe" target="_blank">linkedin.com/in/johndoe</a></p>
-            <p>GitHub: <a href="https://github.com/username" target="_blank">github.com/username</a></p>
+          <div>
+            <div class="meta-row">
+              <div>
+                <strong>Выпускная квалификационная работа — Разработчик</strong>
+                <div class="muted">Декабрь 2024 — Май 2025</div>
+              </div>
+            </div>
+            <p class="muted" style="margin-top:8px">Создал агента для автоматизированного создания конспектов по аудио‑лекциям — Telegram‑бот <strong>CONSPECTIUS</strong>. Реализовал парсинг аудио (AssemblyAI), мультиязычность (19+ языков), контроль фактической точности (агент опирается на аудио, не придумывает факты), веб‑интерфейс для загрузки больших файлов и упаковку в Docker. Проект был развёрнут на VPS с доменом и SSL.</p>
+            <div class="muted" style="margin-top:8px"><strong>Технологии:</strong> Python, Aiogram, AssemblyAI API, OpenAI API, Docker, Docker‑compose</div>
+            <p style="margin-top:8px"><a class="link" href="https://github.com/m4deme1ns4ne/CONSPECTIUS">GitHub — CONSPECTIUS</a> · <a class="link" href="https://drive.google.com/drive/folders/1NO19vJiMPnCsWnyinx3mcnIQ6RWhRKag?usp=share_link">Примеры конспектов</a></p>
+          </div>
+
+        </section>
+
+        <section class="card">
+          <h2 style="margin-top:0">Проекты</h2>
+
+          <div class="project">
+            <h4><a class="link" href="https://github.com/m4deme1ns4ne/Examius">Examius</a></h4>
+            <p class="muted">API‑сервис для ответов на вопросы с использованием LLM и RAG. Стек: Python, FastAPI, LangChain.</p>
+          </div>
+
+          <div class="project">
+            <h4><a class="link" href="https://github.com/m4deme1ns4ne/DecisionTreeClassifierTitanic">DecisionTreeClassifierTitanic</a></h4>
+            <p class="muted">Образцовый ML‑проект: предсказание выживания на Титанике с использованием DecisionTreeClassifier (Jupyter Notebook).</p>
+          </div>
+
+          <div class="project">
+            <h4><a class="link" href="https://github.com/m4deme1ns4ne/site_conspectius">site_conspectius</a></h4>
+            <p class="muted">Веб‑интерфейс для работы с ботом CONSPECTIUS (загрузка аудио, управление заданиями и вывод результатов).</p>
+          </div>
+
+          <div class="project">
+            <h4><a class="link" href="https://github.com/m4deme1ns4ne/obsidian-autogenerate-cheetsheet-ai-plugin">Obsidian AutoGenerate Cheetsheet (plugin)</a></h4>
+            <p class="muted">Плагин для генерации шпаргалок с помощью LLM — TypeScript проект (пользовательский плагин для Obsidian).</p>
+          </div>
+
+          <div class="muted">Полный список репозиториев доступен на <a class="link" href="https://github.com/m4deme1ns4ne?tab=repositories">GitHub</a>.</div>
+        </section>
+
+        <section class="card">
+          <h2 style="margin-top:0">Образование</h2>
+          <p class="muted"><strong>Российский государственный педагогический университет имени А. И. Герцена, Санкт‑Петербург</strong><br>Факультет: Технологии разработки программного обеспечения · Ожидаемый выпуск: 2026</p>
+        </section>
+
+      </main>
+
+      <aside>
+        <div class="card">
+          <h3 style="margin-top:0">Контакты</h3>
+          <p class="muted" style="margin:6px 0"><strong>Телефон:</strong> <a class="link" href="tel:+79517560461">+7 (951) 756‑04‑61</a></p>
+          <p style="margin:6px 0"><strong>Email:</strong> <a class="link" href="mailto:alexandervolzhanin2004@gmail.com">alexandervolzhanin2004@gmail.com</a></p>
+          <p style="margin:6px 0"><strong>Telegram:</strong> <a class="link" href="https://t.me/mademe1nsane">@mademe1nsane</a></p>
+
+          <h4 style="margin-top:12px;margin-bottom:6px">Дополнительно</h4>
+          <p class="muted" style="margin:6px 0">Гражданство: Россия · Проживает: Санкт‑Петербург · Готов к редким командировкам · Не готов к переезду</p>
+
+          <h4 style="margin-top:12px;margin-bottom:6px">Доп. ссылки</h4>
+          <p style="margin:6px 0"><a class="link" href="https://github.com/m4deme1ns4ne">GitHub</a></p>
+          <p style="margin:6px 0"><a class="link" href="https://habr.com/ru/users/m4deme1ns4ne">Habr</a></p>
         </div>
-    </section>
+
+      </aside>
+    </div>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2025 John Doe. All rights reserved.</p>
-        </div>
+      © 2025 Александр Волжанин — <a class="link" href="https://github.com/m4deme1ns4ne">github.com/m4deme1ns4ne</a>
     </footer>
-
-    <script src="script.js"></script>
+  </div>
 </body>
 </html>
